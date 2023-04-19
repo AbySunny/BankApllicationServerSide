@@ -1,0 +1,162 @@
+Server creation
+---------------
+
+create package.json file    - npm init
+install express framework   - npm i express
+
+
+server side technology - node -resolve multiple request at a time
+
+API
+---
+http request
+
+header            body
+secret data       data-json
+
+types
+------
+GET      - read
+POST     - create
+PUT      - complete updation
+PATCH    - partial updation
+DELETE   - remove
+
+server response status code
+-------------------------
+100  - information
+200  - success
+300  -redirection
+400  - clint side error
+500  - server side error
+
+
+server creation steps
+--------------------
+
+1. import express
+2. create app using express
+3. port number seting  - 3000
+4. resolve http requests
+
+
+Nodemon
+-------
+if we run server using node, recombilation not work
+so we use another server Nodemon
+
+npm i -g nodemon
+
+
+
+
+express.json()       - to convert all request datas from json to javascript
+.json(data)          - convert(js to json) and send the data as response
+.status(statusCode)  - change the responce status code as statusCode
+
+
+token in server
+---------------------
+
+JWT token - json web token
+install
+        - npm i jsonwebtoken
+- libarary   - jsonwebtoken
+-sign()      - method used to generate jwt token
+-verify()     - used to verify json web token
+
+token verification
+---------------------
+
+middlewares
+-------------
+
+token verifiication can do using middlewares
+middlewares have the capacity to control server request
+
+-middlewares is a finction with three arguments  -  request,response,next
+
+two types of middlewares
+    1. Aplication Specific middlewares
+        -work before all requests in server
+    2. Router Specific middlewares
+        -can apply to specific requests in server
+
+
+how to solve runtime errors in js
+----------------------------------
+
+try-except
+
+try 
+    error causing code
+
+catch        ------------- if there is error in try block then only catch block works
+    error solve
+
+
+
+
+
+Mongo DB   - database
+------------------
+
+install mongodb
+
+
+
+shell commands
+--------------
+CRUD
+
+-show dbs                                                   - to see database
+
+-use (database_name)                                         - to open a database
+
+-show collections                                             - to see collections inside db
+
+-db.(collection_name).find()                                    - to read all data in collection
+
+-db.(collection_name).findOne({acno:1000})                       - to read single data
+
+-db.(collection_name).insertOne({"acno":1000,"name":"amal",...})  - create new data
+
+-db.(collection_name).find({balance:{gt:4000}})                    - find using a condition
+
+-db.(collection_name).deleteOne({"uname":"anu"})                  - used to delete 
+
+-db.(collection_name).updateOne({uname:anu},{$set:{uname:arun}}) - update
+
+register            - insertOne
+login               - findOne
+deposit             - updateOne
+withdraw            - updateOne
+transaction history - findOne
+delete acc          - deleteOne
+
+
+server Database Integration
+----------------------------
+
+database - 27017   
+server   - 3000
+
+mongoose - used to server mdb integration - it's a library
+install - npm i mongoose
+
+steps
+----
+
+1. import mongoose
+2. state a connection string to integrate
+3. define a model for our collection 
+
+
+FrontEnd Server Integration
+--------------------------
+CORS - cross origin resource sharing - library used to frontend server integration
+
+steps
+
+1. import cross
+2. connection string
